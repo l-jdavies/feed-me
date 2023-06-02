@@ -1,8 +1,16 @@
+"use client";
 import Image from "next/image";
-import React from "react";
-import SearchBar from "./components/SearchBar";
+import React, { useEffect } from "react";
+import SearchBar from "../components/SearchBar";
+import { useGlobalContext } from "../context/store";
 
 const LandingPage = () => {
+  const { searchTerm } = useGlobalContext();
+
+  useEffect(() => {
+    console.log(`search val changed: ${searchTerm}`);
+  }, [searchTerm]);
+
   return (
     <div className="relative h-screen">
       <div className="absolute inset-0">
