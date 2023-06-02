@@ -1,5 +1,6 @@
 import Image from "next/image";
 import React from "react";
+import SearchBar from "./components/SearchBar";
 
 const LandingPage = () => {
   return (
@@ -13,8 +14,12 @@ const LandingPage = () => {
         />
       </div>
       <div className="relative z-10 flex items-center justify-center h-full">
-        <div className="bg-white-700 h-[50%] w-[70%]">
-          <h1 className="text-2xl font-bold text-gray-200 ">Search recipes</h1>
+        <div className="z-10 h-[20%] w-[60%] sm:h-[40%] md:h-[60%] bg-white/60 rounded-lg flex justify-center flex-col">
+          <p className="font-space font-black sm:text-3xl text-sm text-center self-center sm:pb-10 pb-2">
+            Enter an ingredient or cuisine below to get started on finding
+            something delicious
+          </p>
+          <SearchBar />
         </div>
       </div>
     </div>
